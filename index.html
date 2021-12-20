@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="/main.js"></script>
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <section class="converter">
+      <form class="form">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Currency Converter</legend>
+          <p class="form__paragraph">
+            <label>
+              <span class="form__labelText">Waluta:</span> 
+              <select class="form__select">
+                <option>EUR (euro)</option>
+                <option>USD (dolar amerykański)</option>
+                <option>AED (dirham ZEA)</option>
+                <option>AUD (dolar australijski)</option>
+                <option>HKD (dolar Hongkongu)</option>
+                <option>CAD (dolar kanadyjski)</option>
+                <option>CHF (frank szwajcarski)</option>
+                <option>GBP (funt szterling)</option>
+                <option>JPY (jen)</option>
+              </select>  
+          </p>
+          <p class="form__paragraph">
+            <label>
+                <span class="form__labelText">Ilość*:</span> 
+                <input
+                  class="form__currency"
+                  type="number"
+                  name="currency"
+                  step="0.01"
+                  min="0.1"
+                  placeholder="0.00"
+                  required
+                />
+              </label> 
+            </p>
+          <p class="form__paragraph">
+            <label>
+              <span class="form__labelText">Aktualny kurs*:</span> 
+              <input
+                class="form__course"
+                type="number"
+                name="course"
+                step="0.001"
+                min="0.1"
+                placeholder="0.000"
+                required
+              />
+            </label>
+          </p>
+          <p class="form__requiredText">* - pola obowiązkowe</p>
+          <p class="form__paragraph">
+            <button class="form__button--count" type="submit">Przelicz</button>
+         </p>
+          <p class="form__paragraph">
+            <label class="form__scoreText">Ilość PLN: <strong class="form__score">0.000</strong> </label>
+          </p>
+          <p class="form__paragraph">
+            <button type="reset" class="form__button--clear">Wyczyść kalkulator</button>
+          </p>
+          <section class="addition">
+            <h2 class="addition__header">Możesz sprawdzić aktualy kurs Euro:</h2>
+            <p class="center">
+              <button  class="addition__button">Sprawdz kurs EUR</button>
+            </p>
+            <p class="addition__paragraph"></p>
+          </section>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

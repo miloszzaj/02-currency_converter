@@ -1,0 +1,113 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Fuzzy Bubbles',
+        cursive;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit
+}
+
+.converter {
+    max-width: 550px;
+    margin: 30px auto;
+}
+
+.form__fieldset {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(245, 223, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form__legend {
+    border: 1px solid rgb(142, 13, 247);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(92, 48, 248);
+    color: white;
+}
+
+.form__paragraph {
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+.form__labelText {
+    width: 150px;
+    display: inline-block;
+}
+
+.form__select {
+    border-radius: 5px;
+    border: 1px solid rgb(115, 123, 233);
+    width: 300px;
+
+}
+
+.form__currency,
+.form__course {
+    border-radius: 5px;
+    border: 1px solid rgb(115, 123, 233);
+    width: 300px;
+    line-height: 1.5;
+}
+
+.form__requiredText {
+    font-size: 12px;
+    margin-left: 28px;
+}
+
+.form__button--count,
+.form__button--clear,
+.addition__button {
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid rgba(165, 42, 42, 0.13);
+    background-color: rgb(249, 205, 255);
+    padding: 20px;
+    width: 200px;
+}
+
+.form__scoreText {
+    font-size: 25px;
+}
+
+.form__score {
+    color: rgb(158, 158, 158);
+}
+
+.form__score--color {
+    color: blueviolet;
+    font-weight: 700;
+}
+
+.addition {
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px dotted rgba(165, 42, 42, 0.514);
+    padding-top: 20px;
+}
+
+.center {
+    margin: auto;
+    max-width: 200px;
+}
+
+.addition__header {
+    text-align: center;
+    font-size: 22px;
+    color: rgba(165, 42, 42, 0.514);
+}
+
+.addition__paragraph {
+    /* width: 200px; */
+    /* margin: 0 auto; */
+    height: 30px;
+    text-align: center;
+
+}
