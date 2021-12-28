@@ -82,7 +82,7 @@
   const euroCourseClickHandler = async () => {
     const CourseParagraph = document.querySelector(".addition__paragraph");
     const response = await fetch(
-      "http://api.nbp.pl/api/exchangerates/rates/A/EUR/",
+      "https://api.nbp.pl/api/exchangerates/rates/a/usd/",
       {
         headers: {
           Accept: "application/json",
@@ -92,7 +92,7 @@
     const data = await response.json();
     const euroCourse = data.rates[0].mid;
 
-    CourseParagraph.innerText = `Aktualny kurs Euro to: ${euroCourse.toFixed(
+    CourseParagraph.innerText = `Aktualny kurs Dolara to: ${euroCourse.toFixed(
       3
     )}`;
   };
