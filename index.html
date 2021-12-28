@@ -28,7 +28,7 @@
           <legend class="form__legend">Currency Converter</legend>
           <p class="form__paragraph">
             <label>
-              <span class="form__labelText">Waluta:</span> 
+              <span class="form__labelText">Waluta:</span>
               <select class="form__select">
                 <option>EUR (euro)</option>
                 <option>USD (dolar amerykański)</option>
@@ -39,25 +39,26 @@
                 <option>CHF (frank szwajcarski)</option>
                 <option>GBP (funt szterling)</option>
                 <option>JPY (jen)</option>
-              </select>  
+              </select>
+            </label>
           </p>
           <p class="form__paragraph">
             <label>
-                <span class="form__labelText">Ilość*:</span> 
-                <input
-                  class="form__currency"
-                  type="number"
-                  name="currency"
-                  step="0.01"
-                  min="0.1"
-                  placeholder="0.00"
-                  required
-                />
-              </label> 
-            </p>
+              <span class="form__labelText">Ilość*:</span>
+              <input
+                class="form__currency"
+                type="number"
+                name="currency"
+                step="0.01"
+                min="0.1"
+                placeholder="0.00"
+                required
+              />
+            </label>
+          </p>
           <p class="form__paragraph">
             <label>
-              <span class="form__labelText">Aktualny kurs*:</span> 
+              <span class="form__labelText">Aktualny kurs*:</span>
               <input
                 class="form__course"
                 type="number"
@@ -71,18 +72,26 @@
           </p>
           <p class="form__requiredText">* - pola obowiązkowe</p>
           <p class="form__paragraph">
-            <button class="form__button--count" type="submit">Przelicz</button>
-         </p>
-          <p class="form__paragraph">
-            <label class="form__scoreText">Ilość PLN: <strong class="form__score">0.000</strong> </label>
+            <button class="form__button js-countButton" type="submit">
+              Przelicz
+            </button>
           </p>
           <p class="form__paragraph">
-            <button type="reset" class="form__button--clear">Wyczyść kalkulator</button>
+            <label class="form__scoreText"
+              >Ilość PLN: <strong class="form__score js-score">0.000</strong>
+            </label>
+          </p>
+          <p class="form__paragraph">
+            <button type="reset" class="form__button js-clearButton">
+              Wyczyść kalkulator
+            </button>
           </p>
           <section class="addition">
-            <h2 class="addition__header">Możesz sprawdzić aktualy kurs Euro:</h2>
+            <h2 class="addition__header">
+              Możesz sprawdzić aktualy kurs Euro:
+            </h2>
             <p class="center">
-              <button  class="addition__button">Sprawdz kurs EUR</button>
+              <button class="addition__button">Sprawdz kurs EUR</button>
             </p>
             <p class="addition__paragraph"></p>
           </section>
