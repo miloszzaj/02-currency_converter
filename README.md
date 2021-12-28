@@ -2,7 +2,7 @@
 
 ## demo
 
-https://miloszzaj.github.io/02-currency_converter/?currency=0.1&course=0.1
+Check out my website: https://miloszzaj.github.io/02-currency_converter/?currency=0.1&course=0.1
 
 ## description
 
