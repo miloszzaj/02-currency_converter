@@ -2,7 +2,7 @@
 
 ## demo
 
-Check out my website: https://miloszzaj.github.io/02-currency_converter
+Check out my website: https://miloszzaj.github.io/02-currency_converter/
 
 ## description
 
