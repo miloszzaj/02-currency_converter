@@ -7,11 +7,11 @@ html {
 *,
 ::after,
 ::before {
-    box-sizing: inherit
+    box-sizing: inherit;
 }
 
 .body {
-    background-image: url("images/dollars-background.jpeg");
+    background-image: url("images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -22,6 +22,7 @@ html {
 }
 
 .form__fieldset {
+    z-index: 2;
     display: flex;
     justify-content: center;
     flex-direction: column;
