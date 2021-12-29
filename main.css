@@ -26,15 +26,15 @@ html {
     justify-content: center;
     flex-direction: column;
     border-radius: 10px;
-    background-color: rgb(245, 223, 255);
+    background-color: rgb(254, 254, 231);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .form__legend {
-    border: 1px solid rgb(142, 13, 247);
+    border: 1px solid rgb(247, 247, 188);
     border-radius: 5px;
     padding: 20px;
-    background-color: rgb(92, 48, 248);
+    background-color: rgb(116, 148, 106);
     color: white;
     font-weight: 600;
 }
@@ -53,7 +53,7 @@ html {
 
 .form__select {
     border-radius: 5px;
-    border: 1px solid rgb(115, 123, 233);
+    border: 1px solid rgb(116, 148, 106);
     width: 300px;
     padding: 10px;
 }
@@ -61,7 +61,7 @@ html {
 .form__currency,
 .form__course {
     border-radius: 5px;
-    border: 1px solid rgb(115, 123, 233);
+    border: 1px solid rgb(116, 148, 106);
     width: 300px;
     line-height: 1.5;
     padding: 10px;
@@ -75,9 +75,10 @@ html {
 .form__button,
 .addition__button {
     margin: 0 auto;
+    color: ivory;
     border-radius: 5px;
-    border: 1px solid rgba(165, 42, 42, 0.13);
-    background-color: rgb(249, 205, 255);
+    border: 1px solid rgb(52, 56, 46);
+    background-color: rgb(83, 89, 73);
     padding: 20px;
     width: 200px;
 }
@@ -85,8 +86,8 @@ html {
 .form__button:hover,
 .addition__button:hover {
     cursor: pointer;
-    background-color: rgb(228, 98, 245);
-    box-shadow: 0px 0px 14px 6px rgba(109, 10, 255, 0.51);
+    background-color: rgb(43, 144, 103);
+    box-shadow: 0px 0px 14px 6px rgb(84, 168, 135);
 }
 
 .form__scoreText {
@@ -98,14 +99,14 @@ html {
 }
 
 .form__score--color {
-    color: blueviolet;
+    color: rgb(43, 144, 103);
     font-weight: 700;
 }
 
 .addition {
     margin: 0 auto;
     width: 100%;
-    border-top: 1px dotted rgba(165, 42, 42, 0.514);
+    border-top: 1px dotted rgb(43, 144, 103);
     padding-top: 20px;
 }
 
@@ -117,12 +118,10 @@ html {
 .addition__header {
     text-align: center;
     font-size: 22px;
-    color: rgba(165, 42, 42, 0.514);
+    color: rgb(43, 144, 103, 0.5);
 }
 
 .addition__paragraph {
-    /* width: 200px; */
-    /* margin: 0 auto; */
     height: 30px;
     text-align: center;
 
