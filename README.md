@@ -14,3 +14,7 @@ Please, enter a value of one currency and course of this currency to be converte
 - ES6+ features
 - BEM
 - FlexBox
+
+## preview
+
+![preview](https://github.com/miloszzaj/02-currency_converter/blob/main/images/preview.png?raw=true)
