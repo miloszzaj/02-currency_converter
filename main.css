@@ -25,18 +25,21 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    border: none;
     border-radius: 10px;
     background-color: rgb(254, 254, 231);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
 }
 
 .form__legend {
-    border: 1px solid rgb(247, 247, 188);
+    border: 2px solid rgb(80, 80, 34);
     border-radius: 5px;
     padding: 20px;
     background-color: rgb(116, 148, 106);
     color: white;
     font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 auto;
 }
 
 .form__paragraph {
