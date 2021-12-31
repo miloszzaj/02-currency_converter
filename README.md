@@ -14,6 +14,7 @@ Please, enter a value of one currency and course of this currency to be converte
 - ES6+ features
 - BEM
 - FlexBox
+- OpenGraph
 
 ## preview
 
