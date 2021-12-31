@@ -1,43 +1,54 @@
 {
-  const scoreElement = document.querySelector(".js-score");
+  const changeClass = (item, classToBeChanged, variant) => {
+    item.classList[variant](classToBeChanged);
+  };
 
-  const showResult = result => {
+  const showResult = (result, scoreElement) => {
     scoreElement.innerText = result.toFixed(3);
   };
-  const countResult = (currency, course, result) => {
+
+  const countResult = (currency, course, scoreElement) => {
     result = currency * course;
-    showResult(result);
-    scoreElement.classList.add("form__score--color");
+    showResult(result, scoreElement);
+    changeClass(scoreElement, "form__score--color", "add");
   };
 
-  const onClickCount = e => {
+  const onClickCount = (e, scoreElement) => {
     e.preventDefault();
     const currencyElement = document.querySelector(".form__currency");
     const courseElement = document.querySelector(".form__course");
     const currency = currencyElement.value;
     const course = courseElement.value;
-    const result = countResult(currency, course);
-    countResult(currency, course, result);
+    countResult(currency, course, scoreElement);
   };
 
-  const onClickClear = e => {
+  const onClickClear = (e, scoreElement) => {
     e.preventDefault();
     scoreElement.innerText = "0.000";
-    scoreElement.classList.remove("form__score--color");
+    changeClass(scoreElement, "form__score--color", "remove");
   };
+
   const init = () => {
+    const scoreElement = document.querySelector(".js-score");
+
     const buttonCountElement = document.querySelector(".js-countButton");
     const buttonClearElement = document.querySelector(".js-clearButton");
-    buttonCountElement.addEventListener("click", onClickCount);
-    buttonClearElement.addEventListener("click", onClickClear);
+    buttonCountElement.addEventListener("click", e =>
+      onClickCount(e, scoreElement)
+    );
+    buttonClearElement.addEventListener("click", e =>
+      onClickClear(e, scoreElement)
+    );
   };
   init();
 
   //advanced option:
 
-  const CourseButton = document.querySelector(".addition__button");
-  const euroCourseClickHandler = async () => {
-    const CourseParagraph = document.querySelector(".addition__paragraph");
+  const courseButton = document.querySelector(".addition__button");
+
+  const euroCourseClickHandler = async e => {
+    e.preventDefault();
+    const courseParagraph = document.querySelector(".addition__paragraph");
     const response = await fetch(
       "https://api.nbp.pl/api/exchangerates/rates/a/usd/",
       {
@@ -49,10 +60,10 @@
     const data = await response.json();
     const euroCourse = data.rates[0].mid;
 
-    CourseParagraph.innerText = `Aktualny kurs Dolara to: ${euroCourse.toFixed(
+    courseParagraph.innerText = `Aktualny kurs Dolara to: ${euroCourse.toFixed(
       3
     )}`;
   };
 
-  CourseButton.addEventListener("click", euroCourseClickHandler);
+  courseButton.addEventListener("click", euroCourseClickHandler);
 }
