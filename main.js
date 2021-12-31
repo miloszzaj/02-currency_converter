@@ -44,9 +44,7 @@
 
   //advanced option:
 
-  const courseButton = document.querySelector(".addition__button");
-
-  const euroCourseClickHandler = async e => {
+  const dollarCourseClickHandler = async e => {
     e.preventDefault();
     const courseParagraph = document.querySelector(".addition__paragraph");
     const response = await fetch(
@@ -58,12 +56,15 @@
       }
     );
     const data = await response.json();
-    const euroCourse = data.rates[0].mid;
+    const dollarCourse = data.rates[0].mid;
 
-    courseParagraph.innerText = `Aktualny kurs Dolara to: ${euroCourse.toFixed(
+    courseParagraph.innerText = `Aktualny kurs Dolara to: ${dollarCourse.toFixed(
       3
     )}`;
   };
-
-  courseButton.addEventListener("click", euroCourseClickHandler);
+  const USDfetch = () => {
+    const courseButton = document.querySelector(".addition__button");
+    courseButton.addEventListener("click", dollarCourseClickHandler);
+  };
+  USDfetch();
 }
