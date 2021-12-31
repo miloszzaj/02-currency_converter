@@ -62,7 +62,7 @@ html {
     padding: 10px;
 }
 
-.form__currency,
+.form__amount,
 .form__course {
     border-radius: 5px;
     border: 1px solid rgb(116, 148, 106);

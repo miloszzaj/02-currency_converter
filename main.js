@@ -7,19 +7,19 @@
     scoreElement.innerText = result.toFixed(3);
   };
 
-  const countResult = (currency, course, scoreElement) => {
-    result = currency * course;
+  const countResult = (amount, course, scoreElement) => {
+    result = amount * course;
     showResult(result, scoreElement);
     changeClass(scoreElement, "form__score--color", "add");
   };
 
   const onClickCount = (e, scoreElement) => {
     e.preventDefault();
-    const currencyElement = document.querySelector(".form__currency");
+    const amountElement = document.querySelector(".form__amount");
     const courseElement = document.querySelector(".form__course");
-    const currency = currencyElement.value;
+    const amount = amountElement.value;
     const course = courseElement.value;
-    countResult(currency, course, scoreElement);
+    countResult(amount, course, scoreElement);
   };
 
   const onClickClear = (e, scoreElement) => {
