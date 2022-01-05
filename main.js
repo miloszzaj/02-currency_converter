@@ -1,16 +1,16 @@
 {
   const changeClass = (item, classToBeChanged, variant) => {
+    console.log(item, classToBeChanged, variant);
     item.classList[variant](classToBeChanged);
   };
 
   const showResult = (result, scoreElement) => {
     scoreElement.innerText = result.toFixed(3);
+    changeClass(scoreElement, "form__score--color", "add");
   };
 
-  const countResult = (amount, course, scoreElement) => {
-    result = amount * course;
-    showResult(result, scoreElement);
-    changeClass(scoreElement, "form__score--color", "add");
+  const countResult = (amount, course) => {
+    return amount * course;
   };
 
   const onClickCount = (e, scoreElement) => {
@@ -19,7 +19,9 @@
     const courseElement = document.querySelector(".form__course");
     const amount = amountElement.value;
     const course = courseElement.value;
-    countResult(amount, course, scoreElement);
+    const result = countResult(amount, course);
+    console.log(result, course, amount);
+    showResult(result, scoreElement);
   };
 
   const onClickClear = (e, scoreElement) => {
@@ -30,7 +32,6 @@
 
   const init = () => {
     const scoreElement = document.querySelector(".js-score");
-
     const buttonCountElement = document.querySelector(".js-countButton");
     const buttonClearElement = document.querySelector(".js-clearButton");
     buttonCountElement.addEventListener("click", e =>
