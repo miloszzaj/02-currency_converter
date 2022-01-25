@@ -1,7 +1,6 @@
 html {
     box-sizing: border-box;
-    font-family: 'Fuzzy Bubbles',
-        cursive;
+    font-family: 'Fuzzy Bubbles',cursive;
 }
 
 *,
@@ -16,7 +15,7 @@ html {
     background-attachment: fixed;
 }
 
-.converter {
+.form {
     max-width: 550px;
     margin: 30px auto;
 }
